@@ -12,6 +12,8 @@ namespace RestaurantApp
         {
             Console.WriteLine("Hello SIT.1/1");
             Console.WriteLine("Hello jaaaa");
+            Console.WriteLine("Week 2";
+
         }
     }
 }
