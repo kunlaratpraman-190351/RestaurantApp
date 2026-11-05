@@ -18,8 +18,24 @@ namespace RestaurantApp
             {
                 new Restaurant(1, "Quanjude Roast Duck", "Beijing Cuisine", 4.5),
                 new Restaurant(2, "Donglaishun Hot Pot", "Hot Pot", 4.6),
-                new Restaurant(3, "Din Tai Fung", "Taiwanese Cuisine", 4.7)
+                new Restaurant(3, "Din Tai Fung", "Taiwanese Cuisine", 4.7),
+                new Restaurant(4, "Huguosi Snacks", "Snacks", 4.2),
+                new Restaurant(5, "Haidilao Hot Pot", "Hot Pot", 4.8),
             };
+
+            Console.WriteLine("--- Restaurant List ---");
+            foreach (var item in restaurants)
+            {
+                Console.WriteLine($"ID: {item.Id} | Name: {item.Name} | Type: {item.Type} | Rating: {item.Rating}");
+            }
+
+            // คำนวณจำนวนร้านและคะแนนเฉลี่ย
+            int totalCount = restaurants.Count;
+            double avgRating = restaurants.Average(r => r.Rating);
+
+            Console.WriteLine("-----------------------");
+            Console.WriteLine($"Total Restaurants: {totalCount}");
+            Console.WriteLine($"Average Rating: {avgRating:F2}");
 
 
         }
